@@ -11,7 +11,7 @@ const forecast = (lat, long, callback) => {
         if (body.error) {
             console.log('invalid input', undefined)
         } else {
-            callback(undefined, body.current.weather_descriptions[0] + " is " + body.current.temperature + " deg but feels like " + body.current.feelslike + " deg")
+            callback(undefined, body.current.weather_descriptions[0] + " is " + body.current.temperature + " deg but feels like " + body.current.feelslike + " deg and wind speed is " + body.current.wind_speed)
         }
 
 

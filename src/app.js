@@ -11,6 +11,7 @@ const products = [
 console.log(products[0])
 
 const app = express()
+const port = process.env.PORT || 3000
 const public = path.join(__dirname, '../public')
 const viewPath = path.join(__dirname, '../templates/views')
 const partialsPath = path.join(__dirname, '../templates/partails')
@@ -92,6 +93,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(4000, () => {
+app.listen(port, () => {
     console.log('running')
 })
